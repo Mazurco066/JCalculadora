@@ -7,7 +7,7 @@ import javax.swing.JButton;
  */
 public class Calculadora extends javax.swing.JFrame {
     
-    //Atributos
+    //Atributos da Classe principal
     double v1 = 0, v2 = 0;
     String operacao = "";
 
