@@ -1,7 +1,6 @@
 package jcalculadora;
 
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
 
 /**
  * @author Mazurco066
@@ -58,6 +57,11 @@ public class Calculadora extends javax.swing.JFrame {
         txt_view.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_viewActionPerformed(evt);
+            }
+        });
+        txt_view.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_viewKeyTyped(evt);
             }
         });
 
@@ -534,6 +538,10 @@ public class Calculadora extends javax.swing.JFrame {
         this.operacao = "";
         txt_view.setText("");
     }//GEN-LAST:event_btnCActionPerformed
+
+    private void txt_viewKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_viewKeyTyped
+        // Validação para ver número
+    }//GEN-LAST:event_txt_viewKeyTyped
 
     /**
      * @param args the command line arguments
