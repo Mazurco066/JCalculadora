@@ -541,6 +541,20 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void txt_viewKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_viewKeyTyped
         // Validação para ver número
+        System.out.println(evt.getKeyChar());
+        
+        if (Character.isDigit(evt.getKeyChar()) ||    
+            evt.getKeyChar() == '.' &&
+            txt_view.getText().charAt(txt_view.getText().length() - 1) != '.'){
+            
+            //Número é Válido
+        }
+        else{
+            
+            String texto = txt_view.getText();
+            texto = texto.substring(0, 1 - texto.length()); //Se inverter a operação não funcionará como esperado.
+            txt_view.setText(texto);    //Vai gerar exceções mas vai funcionar corretamente
+        }
     }//GEN-LAST:event_txt_viewKeyTyped
 
     /**
